@@ -1,0 +1,161 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: linear-gradient(to top right, #29517a 0%, #05090e 100%);
+  color: #786450;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	height: 299px;
+	width: 320px;
+	box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+	background-color: #1e1e1e;
+	border-radius: 3px;
+}
+
+.outer-grid {
+	display: grid;
+	grid-template-columns: 1fr 35%;
+	height: 100%;
+	border-radius: inherit;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.avatar {
+	width: 82px;
+	height: 82px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circles {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+}
+
+.circle {
+	fill: transparent;
+	stroke-width: 1px;
+	stroke: white;
+}
+
+.circle-inner {
+	clip-path: inset(-1px -1px -1px 15%);
+	transform-origin: 50% 50%;
+	transition: transform 1.5s ease-in-out;
+}
+
+.circles:hover .circle-inner {
+	transform: rotate(360deg)
+}
+
+.circle-outer {
+	clip-path: inset(-1px 15% -1px -1px);
+	transform-origin: 50% 50%;
+	transition: transform 1.5s ease-in-out;
+}
+
+.circles:hover .circle-outer {
+	transform: rotate(-360deg)
+}
+
+.image {
+	display: block;
+	border-radius: 50%;
+	width: 70px;
+}
+
+.name {
+	font-size: 15px;
+	font-weight: 600;
+	margin-top: 20px;
+	color: white;
+}
+
+.job-title a{
+	font-size: 11px;
+	line-height: 15px;
+	color: white;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 33px;
+}
+
+button {
+	border: 1px solid white;;
+	border-radius: 15px;
+	width: 120px;
+	height: 30px;
+	background-color: inherit;
+	color: inherit;
+	font-size: 12px;
+	font-weight: 600;
+	transition: background-color .5s, color .5s;
+}
+
+button:hover {
+	background-color: #786450;
+	color: white;
+}
+
+.column {
+	display: grid;
+	grid-gap: 1px;
+	border-radius: inherit;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: inherit;
+	background-color: #F5E8DF;
+	cursor: pointer;
+	transition: background-color .5s;
+}
+
+.card:hover {
+	background-color: #E1CFC2;
+}
+
+.card-title {
+	padding-top: 30px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.card-desc {
+	font-size: 11px;
+}
